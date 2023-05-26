@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             groupBox1 = new GroupBox();
+            button4 = new Button();
             textBox10 = new TextBox();
             textBox9 = new TextBox();
             textBox8 = new TextBox();
@@ -55,6 +56,7 @@
             button1 = new Button();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
+            button5 = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -63,6 +65,8 @@
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             groupBox1.BackColor = Color.PaleTurquoise;
+            groupBox1.Controls.Add(button5);
+            groupBox1.Controls.Add(button4);
             groupBox1.Controls.Add(textBox10);
             groupBox1.Controls.Add(textBox9);
             groupBox1.Controls.Add(textBox8);
@@ -92,6 +96,16 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thêm thông tin";
+            // 
+            // button4
+            // 
+            button4.Location = new Point(262, 0);
+            button4.Name = "button4";
+            button4.Size = new Size(169, 29);
+            button4.TabIndex = 3;
+            button4.Text = "xem thông tin có sẵn";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // textBox10
             // 
@@ -266,20 +280,21 @@
             // 
             button3.BackColor = Color.Red;
             button3.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(608, 147);
+            button3.Location = new Point(610, 113);
             button3.Name = "button3";
-            button3.Size = new Size(94, 53);
+            button3.Size = new Size(94, 36);
             button3.TabIndex = 2;
             button3.Text = "Xóa";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
             button2.BackColor = Color.Yellow;
             button2.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(608, 88);
+            button2.Location = new Point(610, 71);
             button2.Name = "button2";
-            button2.Size = new Size(94, 53);
+            button2.Size = new Size(94, 36);
             button2.TabIndex = 1;
             button2.Text = "Sửa";
             button2.UseVisualStyleBackColor = false;
@@ -289,9 +304,9 @@
             // 
             button1.BackColor = Color.SkyBlue;
             button1.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(608, 29);
+            button1.Location = new Point(610, 29);
             button1.Name = "button1";
-            button1.Size = new Size(94, 53);
+            button1.Size = new Size(94, 36);
             button1.TabIndex = 0;
             button1.Text = "Thêm";
             button1.UseVisualStyleBackColor = false;
@@ -316,6 +331,18 @@
             dataGridView1.Size = new Size(731, 250);
             dataGridView1.TabIndex = 2;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.Lime;
+            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.Location = new Point(610, 161);
+            button5.Name = "button5";
+            button5.Size = new Size(94, 36);
+            button5.TabIndex = 23;
+            button5.Text = "Refresh";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // Form2
             // 
@@ -363,5 +390,7 @@
         private TextBox textBox8;
         private TextBox textBox7;
         private TextBox textBox6;
+        private Button button4;
+        private Button button5;
     }
 }
