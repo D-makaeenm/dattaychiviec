@@ -108,7 +108,8 @@ namespace Noisql
             }
             catch (Exception ex)
             {
-                MessageBox.Show("hehe");
+                MessageBox.Show("hehe","thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
         private void xoathongtin()
