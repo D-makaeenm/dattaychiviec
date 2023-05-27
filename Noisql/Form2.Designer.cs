@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             groupBox1 = new GroupBox();
+            button5 = new Button();
             button4 = new Button();
             textBox10 = new TextBox();
             textBox9 = new TextBox();
@@ -56,7 +57,6 @@
             button1 = new Button();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
-            button5 = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -96,6 +96,18 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Thêm thông tin";
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.Lime;
+            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.Location = new Point(610, 161);
+            button5.Name = "button5";
+            button5.Size = new Size(94, 36);
+            button5.TabIndex = 23;
+            button5.Text = "Refresh";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button4
             // 
@@ -332,18 +344,6 @@
             dataGridView1.TabIndex = 2;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // button5
-            // 
-            button5.BackColor = Color.Lime;
-            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Location = new Point(610, 161);
-            button5.Name = "button5";
-            button5.Size = new Size(94, 36);
-            button5.TabIndex = 23;
-            button5.Text = "Refresh";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
-            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -356,6 +356,7 @@
             Controls.Add(groupBox1);
             Name = "Form2";
             Text = "Hóa đơn xuất";
+            Load += Form2_Load_1;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

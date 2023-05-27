@@ -27,34 +27,34 @@ namespace Noisql
         //
         private void Form2_load(object sender, EventArgs e)
         {
-            dungthuvien = new thuvien();
-            try
-            {
-                dataGridView1.DataSource = dungthuvien.getallData();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi" + ex.Message, "lỗi", MessageBoxButtons.OK);
-            }
+            //dungthuvien = new thuvien();
+            //try
+            //{
+            //    dataGridView1.DataSource = dungthuvien.getallData();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Lỗi" + ex.Message, "lỗi", MessageBoxButtons.OK);
+            //}
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(dataGridView1.SelectedRows.Count < 0)
+            if (dataGridView1.SelectedRows.Count < 0)
             {
                 MessageBox.Show("ban can chon doi tuong muon xoa", "thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            string makh =  textBox1.Text;
-            string tenkh =  textBox2.Text;
-            string masp =  textBox3.Text;
-            string diachi =  textBox4.Text;
-            string dienthoai =  textBox5.Text;
-            string tennguoiban =  textBox6.Text;
-            string masothue =  textBox7.Text;
-            string sotk =  textBox8.Text;
-            string slban =  textBox9.Text;
-            string ngayban =  textBox10.Text;
+            string makh = textBox1.Text;
+            string tenkh = textBox2.Text;
+            string masp = textBox3.Text;
+            string diachi = textBox4.Text;
+            string dienthoai = textBox5.Text;
+            string tennguoiban = textBox6.Text;
+            string masothue = textBox7.Text;
+            string sotk = textBox8.Text;
+            string slban = textBox9.Text;
+            string ngayban = textBox10.Text;
             string truyvan = $"UPDATE [dbo].[HDX] SET [Mã khách hàng] = '{makh}', [Tên khách hàng] = N'{tenkh}', [Mã sản phẩm] = '{masp}', [Địa chỉ] = N'{diachi}', [Điện thoại] = '{dienthoai}', [Số tài khoản]= '{sotk}', [Tên người bán] = N'{tennguoiban}', [Mã số thuế] = '{masothue}', [Số lượng bán] = '{slban}', [Ngày bán] = '{ngayban}'" + $" WHERE [Mã khách hàng] = '{makh}'";
             SqlConnection conn = new SqlConnection(stringconection);
             try
@@ -82,14 +82,14 @@ namespace Noisql
         {
             string makh = textBox1.Text;
             string tenkh = textBox2.Text;
-            string masp =  textBox3.Text;
+            string masp = textBox3.Text;
             string diachi = textBox4.Text;
             string dienthoai = textBox5.Text;
-            string tennguoiban =  textBox6.Text;
-            string masothue =  textBox7.Text;
-            string sotk =  textBox8.Text;
-            string slban =  textBox9.Text;
-            string ngayban =  textBox10.Text;
+            string tennguoiban = textBox6.Text;
+            string masothue = textBox7.Text;
+            string sotk = textBox8.Text;
+            string slban = textBox9.Text;
+            string ngayban = textBox10.Text;
 
             SqlConnection conn = new SqlConnection(stringconection);
             try
@@ -108,7 +108,7 @@ namespace Noisql
             }
             catch (Exception ex)
             {
-                MessageBox.Show("hehe","thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("hehe", "thong bao", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
@@ -198,7 +198,7 @@ namespace Noisql
                 textBox9.Text = slban;
                 textBox10.Text = ngayban;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -244,6 +244,19 @@ namespace Noisql
         private void button5_Click(object sender, EventArgs e)
         {
             xoathongtin();
+        }
+
+        private void Form2_Load_1(object sender, EventArgs e)
+        {
+            dungthuvien = new thuvien();
+            try
+            {
+                dataGridView1.DataSource = dungthuvien.getallData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi" + ex.Message, "lỗi", MessageBoxButtons.OK);
+            }
         }
     }
 }
