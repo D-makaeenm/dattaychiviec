@@ -45,7 +45,7 @@ namespace Noisql
             sql = @"update HDX
 	        SET
             [Mã khách hàng] = N'" + makh + "' ,[Tên khách hàng]=  N'" + tenkh + "' ,[Mã sản phẩm]= N'" + masp + "'  ,[Địa chỉ]= N'" + diachi + "'  ,[Điện thoại]=N'" + dienthoai + "' ,[Tên người bán] = N'" + tennguoiban + "', [Mã số thuế]= N'" + mst + "', [Số tài khoản] = N'" + stk + "', [Số lượng bán] = N'" + slban + "', [Ngày bán] = N'" + ngayban + "'" + $" where [Mã khách hàng] = N'" + vitri + " '";
-            MessageBox.Show(sql);
+            MessageBox.Show("Đã sửa thành công !!!");
             textBox11.Clear();
             thuchien = new SqlCommand(sql, ketnoi);
             thuchien.ExecuteNonQuery();
