@@ -48,7 +48,7 @@
             button1.Name = "button1";
             button1.Size = new Size(130, 60);
             button1.TabIndex = 0;
-            button1.Text = "Hóa đơn nhập";
+            button1.Text = "Hóa đơn xuất";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
@@ -100,7 +100,7 @@
             button4.Name = "button4";
             button4.Size = new Size(180, 60);
             button4.TabIndex = 6;
-            button4.Text = "Hóa đơn xuất";
+            button4.Text = "Hóa đơn nhập";
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 

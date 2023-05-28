@@ -30,9 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             groupBox1 = new GroupBox();
-            button5 = new Button();
-            button4 = new Button();
+            label11 = new Label();
+            textBox11 = new TextBox();
             textBox10 = new TextBox();
+            button5 = new Button();
             textBox9 = new TextBox();
             textBox8 = new TextBox();
             textBox7 = new TextBox();
@@ -65,9 +66,10 @@
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             groupBox1.BackColor = Color.PaleTurquoise;
-            groupBox1.Controls.Add(button5);
-            groupBox1.Controls.Add(button4);
+            groupBox1.Controls.Add(label11);
+            groupBox1.Controls.Add(textBox11);
             groupBox1.Controls.Add(textBox10);
+            groupBox1.Controls.Add(button5);
             groupBox1.Controls.Add(textBox9);
             groupBox1.Controls.Add(textBox8);
             groupBox1.Controls.Add(textBox7);
@@ -97,34 +99,41 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Thêm thông tin";
             // 
-            // button5
+            // label11
             // 
-            button5.BackColor = Color.Lime;
-            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.Location = new Point(610, 161);
-            button5.Name = "button5";
-            button5.Size = new Size(94, 36);
-            button5.TabIndex = 23;
-            button5.Text = "Refresh";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
+            label11.AutoSize = true;
+            label11.Location = new Point(278, 11);
+            label11.Name = "label11";
+            label11.Size = new Size(136, 20);
+            label11.TabIndex = 26;
+            label11.Text = "Mã hàng muốn sửa";
+            label11.Click += label11_Click;
             // 
-            // button4
+            // textBox11
             // 
-            button4.Location = new Point(262, 0);
-            button4.Name = "button4";
-            button4.Size = new Size(169, 29);
-            button4.TabIndex = 3;
-            button4.Text = "xem thông tin có sẵn";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            textBox11.Location = new Point(420, 8);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(150, 27);
+            textBox11.TabIndex = 25;
             // 
             // textBox10
             // 
             textBox10.Location = new Point(420, 174);
             textBox10.Name = "textBox10";
             textBox10.Size = new Size(150, 27);
-            textBox10.TabIndex = 22;
+            textBox10.TabIndex = 24;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.Lime;
+            button5.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.Location = new Point(610, 155);
+            button5.Name = "button5";
+            button5.Size = new Size(94, 36);
+            button5.TabIndex = 23;
+            button5.Text = "Refresh";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // textBox9
             // 
@@ -336,13 +345,13 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(35, 284);
+            dataGridView1.Location = new Point(35, 276);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(731, 250);
+            dataGridView1.Size = new Size(731, 258);
             dataGridView1.TabIndex = 2;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // Form2
             // 
@@ -386,12 +395,13 @@
         private Label label5;
         private Label label4;
         private Label label3;
-        private TextBox textBox10;
         private TextBox textBox9;
         private TextBox textBox8;
         private TextBox textBox7;
         private TextBox textBox6;
-        private Button button4;
         private Button button5;
+        private TextBox textBox10;
+        private Label label11;
+        private TextBox textBox11;
     }
 }

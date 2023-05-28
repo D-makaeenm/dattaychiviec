@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Noisql", "Noisql\Noisql.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "folder test", "folder test", "{05F83641-BA4C-40E6-ABE8-5B3EDF8B2BDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "baithi", "C:\Users\Admin\Downloads\baithi\baithi\baithi\baithi.csproj", "{B64FB579-41BA-48D9-8B54-C1998A095BAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C#", "..\C#\C#\C#.csproj", "{31C2B6B8-7AE6-4B9B-B5F5-32225FD0A5DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,17 +25,17 @@ Global
 		{A9CE40BE-3A67-4882-BD6B-9251F4B2A142}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9CE40BE-3A67-4882-BD6B-9251F4B2A142}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9CE40BE-3A67-4882-BD6B-9251F4B2A142}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B64FB579-41BA-48D9-8B54-C1998A095BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B64FB579-41BA-48D9-8B54-C1998A095BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B64FB579-41BA-48D9-8B54-C1998A095BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B64FB579-41BA-48D9-8B54-C1998A095BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31C2B6B8-7AE6-4B9B-B5F5-32225FD0A5DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31C2B6B8-7AE6-4B9B-B5F5-32225FD0A5DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31C2B6B8-7AE6-4B9B-B5F5-32225FD0A5DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31C2B6B8-7AE6-4B9B-B5F5-32225FD0A5DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A9CE40BE-3A67-4882-BD6B-9251F4B2A142} = {EE05C421-EB12-4B6A-8B1A-C6FC6328104D}
-		{B64FB579-41BA-48D9-8B54-C1998A095BAE} = {05F83641-BA4C-40E6-ABE8-5B3EDF8B2BDE}
+		{31C2B6B8-7AE6-4B9B-B5F5-32225FD0A5DA} = {05F83641-BA4C-40E6-ABE8-5B3EDF8B2BDE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9866F466-181D-40DC-B0BF-8176D796BB7A}
