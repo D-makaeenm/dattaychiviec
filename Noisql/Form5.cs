@@ -49,7 +49,7 @@ namespace Noisql
             ketnoi.Open();
             sql = @"update HDNhap
             set 
-            [Số HĐN] = N'" + sohdn + "' ,[Mã SP] =  N'" + masp + "' ,[Ngày nhập]= N'" + ngaynhap + "'  ,[Địa chỉ]= N'" + mancc + "'  ,[Điện thoại]=N'" + slnhap + "' ,[Tên người bán] = N'" + dongia + "', [Mã số thuế]= N'" + dvt + "'" + $" where [Mã khách hàng] = N'" + vitri + " '";
+            [Số HĐN] = N'" + sohdn + "' ,[Mã SP] =  N'" + masp + "' ,[Ngày nhập]= N'" + ngaynhap + "'  ,[Mã NCC]= N'" + mancc + "'  ,[Số lượng nhập]=N'" + slnhap + "' ,[Đơn giá] = N'" + dongia + "', [Đơn vị tính]= N'" + dvt + "'" + $" where [Số HĐN] = N'" + vitri + " '";
             MessageBox.Show("Đã sửa thành công !!");
             textBox11.Clear();
             thuchien = new SqlCommand(sql, ketnoi);
@@ -72,10 +72,9 @@ namespace Noisql
             string slnhap = textBox6.Text;
             string dongia = textBox7.Text;
             string dvt = textBox8.Text;
-            string vitri = textBox11.Text;
             ketnoi.Open();
             sql = @"insert into HDNhap values
-            (N'" + sohdn + "', N'" + masp + "', N'" + ngaynhap + "', N'" + mancc + "',N'" + slnhap + "',N'" + dongia + "',N'" + dvt + "',N'" + vitri + "')";
+            (N'" + sohdn + "', N'" + masp + "', N'" + ngaynhap + "', N'" + mancc + "',N'" + slnhap + "',N'" + dongia + "',N'" + dvt + "')";
             MessageBox.Show("Thêm thành công!!!");
             thuchien = new SqlCommand(sql, ketnoi);
             thuchien.ExecuteNonQuery();
