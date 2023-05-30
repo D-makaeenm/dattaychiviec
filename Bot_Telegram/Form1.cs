@@ -3,12 +3,15 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Threading;
 using System.Windows.Forms;
-
+using Microsoft.Data.SqlClient;
+using System.Data.SqlClient;
 using Telegram.Bot;
 using Telegram.Bot.Exceptions;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using System.Data;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Bot_Telegram
 {
@@ -109,19 +112,72 @@ namespace Bot_Telegram
 
 
                 */
-                string namebot = "duydithi_bot";
 
+                string namebot = "duydithi_bot";
                 if (s2.StartsWith("gv"))
                 {
                     reply = "Chào mừng giảng viên tới với bot: " + namebot + "😲😲😲";
                 }
-                else if (s2.StartsWith("tkdh "))
-                {
-                    string tenkh = messageText.Substring(2);
 
-                    timkiemdonhang tk = new timkiemdonhang();
-                    reply = tk.timdonhang("%" + tenkh.Replace(' ', '%') + "%");
+
+                
+                else if (s2.StartsWith("tkhd"))
+                {
+                    string strconnect = "Data Source=DuyVPro;Initial Catalog=BTL;Integrated Security=True;Trust Server Certificate=True";
+                    reply = "Đây là tất cả đơn hàng hiện có \n";
+                    try
+                    {
+                        using (SqlConnection connect = new SqlConnection(strconnect))
+                        {
+                            connect.Open();
+                            string sql = "select *from HDX";
+                            using (SqlCommand command = new SqlCommand(sql, connect))
+                            {
+                                using (SqlDataReader reader = command.ExecuteReader())
+                                {
+                                    while (reader.Read())
+                                    {
+                                        string column1Value = reader.GetString(0);
+                                        string column2Value = reader.GetString(1);
+                                        string column3Value = reader.GetString(2);
+                                        string column4Value = reader.GetString(3);
+                                        string column5Value = reader.GetString(4);
+                                        string column6Value = reader.GetString(5);
+                                        string column7Value = reader.GetString(6);
+                                        string column8Value = reader.GetString(7);
+                                        string column9Value = reader.GetString(8);
+                                        string column10Value = reader.GetString(9);
+                                        string messages = $"Mã kh: {column1Value}, tên kh: {column2Value}, mã sp: {column3Value}," +
+                                            $"địa chỉ: {column4Value}, điện thoại: {column5Value}, số tk: {column6Value}, tên người bán: {column7Value}," +
+                                            $"mã số thuế: {column8Value}, số lượng bán: {column9Value}, ngày bán: {column10Value}";
+                                        reply += messages + "\n";
+                                    }
+                                }
+                            }
+                            connect.Close();
+                        }
+                    }
+                    catch(Exception ex)
+                    {
+                        reply = ex.Message;
+                    }
                 }
+                else if(s2.StartsWith("/help"))
+                {
+                    reply = "danh sách câu lệnh bạn có thể sử dụng\n" +
+                        "1. gv\n" +
+                        "2. tkdh - ( tìm kiếm hóa đơn )\n" +
+                        "3. gptb2 - ( giải phương trình bậc 2 )\n" +
+                        "4. themhd\n";
+                }
+
+                else if (s2.StartsWith("themhd"))
+                {
+                        reply = "Bạn muốn thêm ư? Hãy copy path ứng dụng này và dán nó vào file explorer của pc này \n" +
+                        "D:\\Code\\Visual Studio\\solution\\dattaychiviec\\Noisql\\bin\\Debug\\net6.0-windows\\Noisql.exe\n" +
+                        "Nhớ chọn Hóa đơn xuát nhé";
+                }
+
                 else if (s2.StartsWith("gptb2: "))
                 {
                     string[] sep = { "gptb2:", "x^2", "x*x", "x", "=0", "= 0" };
@@ -152,11 +208,7 @@ namespace Bot_Telegram
                         reply = "Chưa nhập đúng định dạng: gptb2: ax^2+bx+c=0";
                     }
                 }
-                //else if (s2.StartsWith("tk"))
-                //{
-                //    string q = messageText.Substring(3);
-                //    reply = timkiemDB.TimKiem(q);
-                //}
+
                 else
                 {
                     reply = "Tôi khẳng định bạn nói là: " + messageText;

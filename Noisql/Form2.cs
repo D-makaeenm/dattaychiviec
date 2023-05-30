@@ -74,7 +74,7 @@ namespace Noisql
             ketnoi.Open();
             sql = @"insert into HDX
 	        values
-            (N'" + makh + "', N'" + tenkh + "', N'" + masp + "', N'" + diachi + "',N'" + dienthoai + "',N'" + tennguoiban + "',N'" + mst + "',N'" + stk + "', N'" + slban + "',N'" + ngayban + "')";
+            (N'" + makh + "', N'" + tenkh + "', N'" + masp + "', N'" + diachi + "',N'" + dienthoai + "',N'" + stk + "',N'" + mst + "',N'" + tennguoiban + "', N'" + slban + "',N'" + ngayban + "')";
             MessageBox.Show("THÊM THÀNH CÔNG!!");
             thuchien = new SqlCommand(sql, ketnoi);
             thuchien.ExecuteNonQuery();
