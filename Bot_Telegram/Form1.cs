@@ -12,7 +12,9 @@ using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using System.Data;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
+/*
+ * Author: Ma Bach Duy sắp vip pro
+ */
 namespace Bot_Telegram
 {
     public partial class Form1 : Form
@@ -44,9 +46,6 @@ namespace Bot_Telegram
             }
         }
 
-        /// <summary>
-        /// hàm tạo: ko kiểu, trùng tên với class
-        /// </summary>
         public Form1()
         {
             InitializeComponent();
