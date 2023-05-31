@@ -232,7 +232,7 @@ namespace Bot_Telegram
                         => $"Telegram API Error:\n[{apiRequestException.ErrorCode}]\n{apiRequestException.Message}",
                     _ => exception.ToString()
                 };
-                Console.WriteLine("Lỗi này pri");
+                MessageBox.Show("Lỗi này pri");
                 AddLog(ErrorMessage);
                 return Task.CompletedTask;
             }
